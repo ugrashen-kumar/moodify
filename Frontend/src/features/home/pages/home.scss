@@ -1,0 +1,30 @@
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 25px;
+  padding: 25px;
+  border-top: 1px solid #3d3d3d;
+  // height: calc(100vh - 155px);
+  .songlist-bx,
+  .face-expression-bx,
+  .info-bx {
+    width: 33%;
+  }
+  .info-bx{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    button{
+        width: 90%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    .songlist-bx,
+    .face-expression-bx,
+    .info-bx {
+      width: 100%;
+    }
+  }
+}
