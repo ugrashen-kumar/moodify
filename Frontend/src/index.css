@@ -11,6 +11,8 @@ body,
     color: whitesmoke;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+main{padding: 0px 50px;}
+
 main.home{
     position: relative;
     height: 100vh;
@@ -24,24 +26,41 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    /* align-items: center; */
     text-align: center;
     gap: 20px;
+}
+.cam-container .btns{display: flex; justify-content: flex-start; gap: 10px;}
+.cam-container .current-exp{
+  width: fit-content; text-transform: capitalize;
+}
+
+.cam-container .add_song_btn{
+  background: none; 
+}
+.cam-container .add_song_btn:hover{
+  background: crimson;
 }
 button{
     padding: 10px 15px;
     background: crimson;
-    border-radius: 25px;
+    border-radius: 5px;
     color: #fff;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid crimson;
+    transition: all 0.8s;
+}
+button.detect-exp:hover{
+background: none;
 }
 
-.cam-container {
+/* .cam-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
 .camera-frame {
   position: relative;
@@ -95,4 +114,12 @@ button{
   justify-content: center;
   align-items: center;
   color: white;
+}
+
+/* responsive */
+@media screen and (max-width: 768px) {
+  main{padding: 0px 15px;}
+  button{
+    font-size: 13px;
+  }
 }

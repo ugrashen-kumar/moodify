@@ -74,16 +74,51 @@ export const useAuth = () => {
 
 
 
-  const handelLogOut = async () => {
-    setLoading(true);
-    const data = await loguot();
-    setUser(null);
-    setLoading(false);
-  };
+  // const handelLogOut = async () => {
+  //    console.log("LOGOUT CALLED");
+  //   setLoading(true);
+  //   const data = await logout();
+  //   setUser(null);
+  //   setLoading(false);
+  // };
 
-  useEffect(() => {
-    handelGetMe();
-  }, []);
+//  const handelLogOut = async () => {
+//   try {
+//     setLoading(true);
+
+//     await logout();
+
+//     setUser(null);
+//   } catch (error) {
+//     console.log(error);
+//   } finally {
+//     setLoading(false);
+//   }
+// };
+
+const handelLogOut = async () => {
+  try {
+    setLoading(true);
+
+    console.log("Before Logout");
+
+    const data = await logout();
+
+    console.log("Logout Response:", data);
+
+    setUser(null);
+
+    console.log("User set to null");
+  } catch (error) {
+    console.log("Logout Error:", error);
+  } finally {
+    setLoading(false);
+  }
+};
+
+  // useEffect(() => {
+  //   handelGetMe();
+  // }, []);
 
   return {
     user,

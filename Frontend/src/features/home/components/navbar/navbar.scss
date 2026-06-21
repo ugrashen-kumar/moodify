@@ -8,4 +8,8 @@
     top: 0;
     left: 0;
     width: 100%;
+    .logo{
+        display: flex; align-items: center; gap: 10px;
+        .music-icon{color: crimson; position: relative; bottom: -5px;}
+    }
 }

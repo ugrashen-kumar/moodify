@@ -28,7 +28,17 @@ export const getMe = async() =>{
     return response.data
 }
 
-export const logout = async() =>{
-    const response = api.get('/api/auth/loguot')
-    return response.data
-}
+// export const logout = async() =>{
+//     const response = await api.get('/api/auth/logout')
+//     return response.data
+// }
+
+export const logout = async () => {
+  try {
+    const response = await api.post("/api/auth/logout");
+    return response.data;
+  } catch (error) {
+    console.log("Logout API Error:", error);
+    throw error;
+  }
+};

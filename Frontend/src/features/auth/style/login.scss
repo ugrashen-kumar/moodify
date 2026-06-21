@@ -1,49 +1,64 @@
-.login-page{
-    display: flex;  
-    justify-content: center;
-    align-items: center;
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 10px;
+  h1.wlcome-heading {
+    color: crimson;
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+  .form-container {
+    display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    padding: 10px;
-    h1.wlcome-heading{
-        color: crimson;
-        @media screen and (max-width : 768px) {
-            font-size: 20px;
-        }
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    background: #161515;
+    border-radius: 12px;
+    border: 1px solid crimson;
+    margin-top: 20px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      label {
+        font-size: 14px;
+        color: #ddd;
+        font-weight: 600;
+      }
+      input {
+        padding: 10px 16px;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+      }
     }
-    .form-container{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        width: 100%;
-        max-width: 400px;
-        padding: 40px;
-        background: #161515;
-        border-radius: 12px;
-        border: 1px solid crimson;
-        margin-top: 20px;
-    }
-    form{
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        .input-group{
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            label{
-                font-size: 14px;
-                color: #ddd;
-                font-weight: 600;
-            }
-            input{
-                padding: 10px 16px;
-                border-radius: 8px;
-                border: none;
-                outline: none;
-                font-size: 16px;
-            }
 
-        }
+    label.choosesong, select {
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      background: #fff;
+      color: #161515;
+    }
+  }
+}
+.login-page.add-song-page{
+    justify-content: flex-start;
+    .navbar{
+        margin-bottom: 50px;
     }
 }
